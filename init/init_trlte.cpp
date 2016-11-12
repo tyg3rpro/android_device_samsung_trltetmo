@@ -36,8 +36,6 @@
 #include "util.h"
 #include <sys/system_properties.h>
 
-#define ISMATCH(a,b)    (!strncmp(a,b,PROP_VALUE_MAX))
-
 void gsm_properties()
 {
     property_set("telephony.lteOnGsmDevice", "1");
@@ -45,19 +43,14 @@ void gsm_properties()
 }
 
 void init_variant_properties() {
-    char platform[PROP_VALUE_MAX];
-    char bootloader[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    char devicename[PROP_VALUE_MAX];
-    int rc;
 
-    rc = property_get("ro.board.platform", platform);
-    if (!rc || !ISMATCH(platform, ANDROID_TARGET))
+    std::string platform = property_get("ro.board.platform");
+    if (platform != ANDROID_TARGET)
         return;
 
-    property_get("ro.bootloader", bootloader);
+    std::string bootloader = property_get("ro.bootloader");
 
-    if (strstr(bootloader, "N910W8")) {
+    if (bootloader.find("N910W8") == 0) {
         /* trltecan These values are taken from TMO and edited for the 910W8 FIXME */
         property_set("ro.build.fingerprint", "samsung/trltevl/trltecan:6.0.1/MRA58K/N910TUVU2EPE3:user/release-keys");
         property_set("ro.build.description", "trltevl-user 6.0.1 MRA58K N910TUVU2EPE3 release-keys");
@@ -73,9 +66,8 @@ void init_variant_properties() {
         gsm_properties();
     }
 
-    property_get("ro.product.device", device);
-    strlcpy(devicename, device, sizeof(devicename));
-    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader, devicename);
+    std::string device = property_get("ro.product.device");
+    INFO("Found bootloader id %s setting build properties for %s device\n", bootloader.c_str(), device.c_str());
 }
 
 
