@@ -24,8 +24,5 @@ TARGET_KERNEL_VARIANT_CONFIG := apq8084_sec_trlte_tmo_defconfig
 TARGET_INIT_VENDOR_LIB := libinit_trltetmo
 TARGET_UNIFIED_DEVICE := true
 
-# Radio
-BOARD_RIL_CLASS := ../../../device/samsung/trltetmo/ril
-
 # inherit from the proprietary version
 -include vendor/samsung/trltetmo/BoardConfigVendor.mk
