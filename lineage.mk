@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,11 +16,8 @@
 
 $(call inherit-product, device/samsung/trltetmo/full_trltetmo.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
 # Inherit common CM phone.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 PRODUCT_DEVICE := trltetmo
-PRODUCT_NAME := cm_trltetmo
+PRODUCT_NAME := lineage_trltetmo
