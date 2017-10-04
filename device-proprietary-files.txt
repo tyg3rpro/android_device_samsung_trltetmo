@@ -3,8 +3,6 @@ vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
 vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/liblbs_core.so
-vendor/lib/liblocationservice.so
 vendor/lib/libnetmgr.so
 vendor/lib/libqcci_legacy.so
 vendor/lib/libqmi.so
@@ -14,16 +12,12 @@ vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
-vendor/lib/libflp.so
-vendor/lib/libdataitems.so
-vendor/lib/libulp2.so
 lib/libagc_max.so
 lib/libqservice.so
 lib/libtinyxml.so
 lib/libqdutils.so
 lib/libjpegehw.so
 lib/libjpegdhw.so
-lib/libloc_api_v02.so
 lib/libedmnativehelper.so
 lib/libbt-iopdb.so
 lib/libbt-iopdb_mod.so
