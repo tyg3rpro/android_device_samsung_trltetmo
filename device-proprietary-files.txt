@@ -31,6 +31,7 @@ bin/efsks
 bin/ks
 bin/mdm_helper
 bin/mdm_helper_proxy
+bin/netmgrd
 bin/qcks
 bin/qmuxd
 bin/rild
@@ -42,3 +43,4 @@ lib/libsec-ril.so
 lib/libsecril-client.so
 lib/libsecnativefeature.so
 vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libcneapiclient.so
