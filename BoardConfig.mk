@@ -31,5 +31,8 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 19932160
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3774873600
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27040657408
 
+# Radio/RIL
+include $(COMMON_PATH)/radio/single/board.mk
+
 # inherit from the proprietary version
 -include vendor/samsung/trltetmo/BoardConfigVendor.mk
