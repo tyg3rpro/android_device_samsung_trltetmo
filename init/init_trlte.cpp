@@ -1,5 +1,6 @@
 /*
    Copyright (c) 2016, The Linux Foundation. All rights reserved.
+   Copyright (c) 2017-2018, The LineageOS Project. All rights reserved.
 
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
@@ -57,18 +58,18 @@ void init_target_properties()
     std::string bootloader = GetProperty("ro.bootloader", "");
 
     if (bootloader.find("N910T") == 0) {
-        property_override("ro.build.fingerprint", "samsung/trltetmo/trltetmo:6.0.1/MMB29M/N910TUVS2EQG1:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltetmo/trltetmo:6.0.1/MMB29M/N910TUVS2EQG1:user/release-keys");
         property_override("ro.build.description", "trltetmo-user 6.0.1 MMB29M N910TUVS2EQG1 release-keys");
-        property_override("ro.product.model", "SM-N910T");
-        property_override("ro.product.device", "trltetmo");
-        property_override("ro.product.name", "trltetmo");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910T");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "trltetmo");
+        property_override_dual("ro.product.name", "ro.vendor.product.name", "trltetmo");
         gsm_properties();
     } else if (bootloader.find("N910W8") == 0) {
-        property_override("ro.build.fingerprint", "samsung/trltecan/trltecan:6.0.1/MMB29M/N910W8VLS1DQG1:user/release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "samsung/trltecan/trltecan:6.0.1/MMB29M/N910W8VLS1DQG1:user/release-keys");
         property_override("ro.build.description", "trltecan-user 6.0.1 MMB29M N910W8VLS1DQG1 release-keys");
-        property_override("ro.product.model", "SM-N910W8");
-        property_override("ro.product.device", "trltecan");
-        property_override("ro.product.name", "trltecan");
+        property_override_dual("ro.product.model", "ro.vendor.product.model", "SM-N910W8");
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "trltecan");
+        property_override_dual("ro.product.name", "ro.vendor.product.name", "trltecan");
         gsm_properties();
     } else {
         gsm_properties();
