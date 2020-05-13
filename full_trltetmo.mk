@@ -22,5 +22,5 @@ $(call inherit-product, device/samsung/trltetmo/device.mk)
 PRODUCT_NAME := full_trltetmo
 PRODUCT_DEVICE := trltetmo
 PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := trltetmo
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MODEL := Galaxy Note 4 (SM-N910T,T1)
